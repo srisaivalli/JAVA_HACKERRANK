@@ -1,0 +1,36 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+ public static void main(String args[]){
+
+     Scanner s=new Scanner(System.in);
+     int n=s.nextInt();
+     int po=0,ne=0,ze=0;
+     int[] arr=new int[n];
+     for(int i=0; i < n; i++){
+            arr[i] = s.nextInt();
+            if(arr[i]<0){
+                ne++;
+            }else if(arr[i]>0){
+                po++;
+            }else if(arr[i]==0){
+                ze++;
+            }
+        }
+        float a=0f,b=0f,c=0f;
+        a = (float)po/n;
+        b = (float)ne/n;
+        c = (float)ze/n;
+        System.out.printf("%.6f \n",a);
+        System.out.printf("%.6f \n",b);
+        System.out.printf("%.6f",c);
+
+   }
+}
